@@ -5,7 +5,7 @@
 variables:
   GRADLE_OPTS: "-Dorg.gradle.daemon=false"
   CI_REGISTRY: "registry.lan.yukina.tw:5000"
-  CI_REGISTRY_IMAGE: "shuvi/dcdos-api"
+  CI_REGISTRY_IMAGE: "shuvi/dcdos-notion-api"
 
 stages:
   - test

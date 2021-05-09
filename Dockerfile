@@ -9,4 +9,4 @@ RUN mkdir /app
 WORKDIR /app
 COPY main.py main.py
 
-CMD [ "python", "main.py" ]
+CMD [ "python", "main.py", "-h", "dcdos-notion-api" ]
