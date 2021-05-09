@@ -66,11 +66,11 @@ Push tag:
     - docker tag $CI_REGISTRY/$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA $CI_REGISTRY/$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
     - docker push $CI_REGISTRY/$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
 
-# deploy:
-#   stage: deploy
-#   script:
-#     - apk upgrade && apk update
-#     - apk add openssh-client
-#     - echo "${SSH_PRIVATE_KEY}" | ssh-add -
-#     - ssh-keyscan -H 'production.lan.yukina.tw' >> ~/.ssh/known_hosts
-#     - ssh gitlab@production.lan.yukina.tw 
+ deploy:
+   stage: deploy
+   script:
+     - apk upgrade && apk update
+     - apk add openssh-client
+     - echo "${SSH_PRIVATE_KEY}" | ssh-add -
+     - ssh-keyscan -H 'production.lan.yukina.tw' >> ~/.ssh/known_hosts
+     - ssh gitlab@production.lan.yukina.tw 
