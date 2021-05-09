@@ -8,6 +8,5 @@ RUN pip install -r /tmp/requirements.txt
 RUN mkdir /app
 WORKDIR /app
 COPY main.py main.py
-COPY config.ini config.ini
 
 CMD [ "python", "main.py" ]
