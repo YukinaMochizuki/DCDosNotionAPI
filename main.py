@@ -115,4 +115,4 @@ api.add_resource(Thing, '/thing')
 api.add_resource(Event, '/event')
 
 if __name__ == '__main__':
-    app.run(host="dcdos-notion-api", debug=False)
+    app.run(host="0.0.0.0", debug=False)
