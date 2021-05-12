@@ -66,8 +66,10 @@ class Thing(Resource):
             if(args['deadLineStartDate'] is not None):
                 if(args['deadLineTimeEnable'] is True):
                     start = datetime.strptime(args['deadLineStartDate'] + " " + args['deadLineStartTime'], '%Y/%m/%d %H:%M')
+                    start.timezone("CST")
                     if(args['deadLineEndDate'] is not None):
                         end = datetime.strptime(args['deadLineEndDate'] + " " + args['deadLineEndTime'], '%Y/%m/%d %H:%M')
+                        end.timezone("CST")
                         thing.DeadLine = notion.collection.NotionDate(start, end=end)
                     else:
                         thing.DeadLine = notion.collection.NotionDate(start)
