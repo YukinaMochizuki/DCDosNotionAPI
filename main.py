@@ -2,8 +2,8 @@ import sys
 import configparser
 from pprint import pprint
 from datetime import datetime, date
-from backports.zoneinfo import ZoneInfo
-#from zoneinfo import ZoneInfo
+#from backports.zoneinfo import ZoneInfo
+from zoneinfo import ZoneInfo
 import notion
 from notion.client import NotionClient
 from flask import Flask
